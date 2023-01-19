@@ -35,19 +35,21 @@ path_price = driver.find_elements(By.XPATH, '//span[@class="a-price-whole"]')
 
 main_element = driver.find_elements(
     By.XPATH,
-    '// div[@class="a-section a-spacing-small puis-padding-left-' +
+    '//div[@class="a-section a-spacing-small puis-padding-left-' +
     'small puis-padding-right-small"]'
 )
 
-# iterating through all the containers that has the title, price and others information
+# iterating through all the containers that has the title,
+# price and others information
 for element in main_element:
     title = element.find_element(
         By.XPATH,
         './/span[@class="a-size-base-plus a-color-base a-text-normal"]'
     ).text
     price = element.find_element(
-        By.XPATH,
-        './/span[@class="a-price-whole"]'
+        By.CLASS_NAME,
+        'a-price-whole'
+        # './/span[@class="a-price-whole"]'
     ).text
     page.append([title, f"R$ {price}"])
 
