@@ -38,6 +38,8 @@ main_element = driver.find_elements(
     '// div[@class="a-section a-spacing-small puis-padding-left-' +
     'small puis-padding-right-small"]'
 )
+
+# iterating through all the containers that has the title, price and others information
 for element in main_element:
     title = element.find_element(
         By.XPATH,
