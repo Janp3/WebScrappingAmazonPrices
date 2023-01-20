@@ -26,13 +26,6 @@ sleep(.5)
 driver.find_element(By.ID, 'nav-search-submit-button').click()
 sleep(3)
 
-# find titles of all the smartphones
-# path_title = driver.find_elements(
-#     By.XPATH,
-#     '//span[@class="a-size-base-plus a-color-base a-text-normal"]')
-
-# # get price
-# path_price = driver.find_elements(By.XPATH, '//span[@class="a-price-whole"]')
 
 main_element = driver.find_elements(
     By.XPATH,
